@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Table in minutes</string>
+    <string name="lessonresult">LessonResult</string>
+    <string name="start">Start</string>
 </resources>

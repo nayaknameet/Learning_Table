@@ -21,16 +21,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 EditText EditTextNumberId = (EditText) findViewById(R.id.editTextNumberId);
-                int num = Integer.parseInt(EditTextNumberId.getText().toString());
-                System.out.println(num);
-                openLessonActivity();
+                String str_num = EditTextNumberId.getText().toString();
+                openLessonActivity(str_num);
             }
         });
 
     }
 
-    public void openLessonActivity(){
-        Intent intendLesson = new Intent(this, LessonActivity.class);
-        startActivity(intendLesson);
+    public void openLessonActivity(String str_num){
+        Intent intentLesson = new Intent(getApplicationContext(), LessonActivity.class);
+        // Passing the value to LessonActivity
+        intentLesson.putExtra("HelpAll.key.number", str_num);
+        startActivity(intentLesson);
     }
 }
