@@ -2,7 +2,6 @@ package HelpAll.org;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.TextView;
 
 public class LessonActivity extends AppCompatActivity {
@@ -14,8 +13,7 @@ public class LessonActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         TextView textViewLessonId = (TextView) findViewById(R.id.textViewLessonId);
-
-        View viewId = (View) findViewById(R.id.viewId);
+        
 
         if(getIntent().hasExtra("HelpAll.key.number")){
             int user_input = Integer.parseInt(getIntent().getExtras().getString("HelpAll.key.number"));
