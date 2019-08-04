@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,15 +15,30 @@ public class MainActivity extends AppCompatActivity {
 
         Button ButtonLessonId = (Button) findViewById(R.id.buttonLessonId);
 
+
+
         ButtonLessonId.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                EditText EditTextNumberId = (EditText) findViewById(R.id.editTextNumberId);
-                String str_num = EditTextNumberId.getText().toString();
+                String str_num = getStr_num();
                 openLessonActivity(str_num);
             }
         });
+
+        Button ButtonStartId = (Button) findViewById(R.id.buttonStartId);
+
+
+        ButtonStartId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String str_num = getStr_num();
+                Intent intentStart = new Intent(getApplicationContext(), PracticeActivity.class);
+                intentStart.putExtra("HelpAll.key.StartPractice", str_num);
+                startActivity(intentStart);
+            }
+        });
+
 
     }
 
@@ -34,4 +48,11 @@ public class MainActivity extends AppCompatActivity {
         intentLesson.putExtra("HelpAll.key.number", str_num);
         startActivity(intentLesson);
     }
+
+    public String getStr_num() {
+        EditText EditTextNumberId = (EditText) findViewById(R.id.editTextNumberId);
+        String str_num = EditTextNumberId.getText().toString();
+        return str_num;
+    }
+
 }

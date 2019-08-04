@@ -11,11 +11,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="596dp"
+        android:layout_marginTop="376dp"
         android:layout_marginEnd="8dp"
         android:text="Previous"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,11 +24,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="596dp"
+        android:layout_marginTop="376dp"
         android:layout_marginEnd="8dp"
         android:text="Next"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toEndOf="@+id/buttonPrevious"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,10 +41,10 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="table"
-        android:textSize="18sp"
+        android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonPrevious"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintHorizontal_bias="0.321"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -58,10 +58,10 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="Answer"
-        android:textSize="18sp"
+        android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonNext"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintHorizontal_bias="0.376"
         app:layout_constraintStart_toEndOf="@+id/textViewTableId"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -73,7 +73,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="96dp"
         android:layout_marginEnd="8dp"
-        android:text="Button"
+        android:text="Lesson"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
