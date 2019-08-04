@@ -7,13 +7,16 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class PracticeActivity extends AppCompatActivity {
-    TextView textViewTableId;
+    TextView textViewTableId, textPreviousAnsId;
     int i = 1;
     String str_num;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_practice);
+
+        final TextView textViewAnwserId = (TextView) findViewById(R.id.textViewAnswer);
+        textPreviousAnsId = (TextView) findViewById(R.id.textPreviousAnsId);
 
         textViewTableId = (TextView) findViewById(R.id.textViewTableId);
         if(getIntent().hasExtra("HelpAll.key.StartPractice")){
@@ -26,6 +29,7 @@ public class PracticeActivity extends AppCompatActivity {
         buttonNextId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                textViewAnwserId.setText("Answer");
                 if(i==10){
                     return;
                 }
@@ -37,18 +41,32 @@ public class PracticeActivity extends AppCompatActivity {
         buttonPreviousId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                textViewAnwserId.setText("Answer");
                 if(i == 1){
                     return;
                 }
                 ChangeTextView(str_num, --i);
             }
         });
+
+
+        textViewAnwserId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int ans = Integer.parseInt(str_num);
+                textViewAnwserId.setText(""+ans*i);
+            }
+        });
+
+
+
+
     }
 
     public void ChangeTextView(String str_num, int incr_num){
-
         textViewTableId.setText(str_num+" X "+incr_num+":");
-        System.out.println(12);
+        textPreviousAnsId.setText(""+Integer.parseInt(str_num)*(incr_num - 1));
+
     }
 
 }
